@@ -1,0 +1,10 @@
+# enforce https
+RewriteEngine on
+RewriteCond %{HTTPS} !=on
+RewriteCond %{ENV:HTTPS} !=on
+RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
+
+# secret area
+AuthType Basic
+AuthName "Vorschau"
+AuthUserFile /your/path/to/.htuser

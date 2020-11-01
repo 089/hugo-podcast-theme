@@ -1,0 +1,19 @@
+{{ partial "meta.html" . }}
+{{ partial "head/seo.html" . }}
+<title> Podcast:
+{{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
+{{ if eq $url "/" }}
+    {{ .Site.Title }}
+{{ else }}
+    {{ if .Params.Heading }} {{ .Params.Heading }} {{ else }} {{ .Title }} {{ end }}
+{{ end }}
+</title>
+<link rel="canonical" href="{{ .Permalink }}">
+{{ partial "head_includes.html" . }}
+{{ if and (eq .Site.Params.podlove.web_player_enabled true) (.Params.episode) }}
+	{{ if isset .Site.Params.podlove "web_player_script_url" }}
+<script src={{ .Site.Params.podlove.web_player_script_url | absURL }}></script>
+	{{ else }}
+<script src="https://cdn.podlove.org/web-player/embed.js"></script>	
+	{{ end }}
+{{ end }}

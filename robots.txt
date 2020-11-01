@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /images/hide-from-webcrawlers.png
+
+Sitemap: https://7gutegruende.de/index.xml

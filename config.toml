@@ -1,0 +1,161 @@
+baseURL = "https://www.7gutegruende.de"
+languageCode = "de-de"
+title = "7 Gute Gründe"
+theme = "castanet-0.13.0"
+
+HUGO_ENV = "production"
+
+[markup.goldmark.renderer]
+unsafe= true
+
+[permalinks]
+	page = "/:filename/"
+	about = "/:filename/"
+	episode = "/:filename/"
+
+
+# The theme supports menus with up to one submenu per menu item
+# The menu name must be "Main"
+# The menus are sorted based upon their identifier
+
+# [[Menu.Main]]
+#    name = "Über"
+#    identifier = "a"
+#    url = "ueber"
+
+[[Menu.Main]]
+    name = "Kontakt"
+    identifier = "w"
+    url = "kontakt"
+
+[[Menu.Main]]
+    name = "Datenschutz"
+    identifier = "y"
+    url = "datenschutz"
+
+[[Menu.Main]]
+    name = "Impressum"
+    identifier = "z"
+    url = "impressum"
+
+[[Menu.Main]]
+    name = "Mitwirkende"
+    identifier = "c"
+    url = "mitwirkende"
+
+[[Menu.Main]]
+    name = "Lizenz"
+    identifier = "x"
+    url = "lizenz"
+
+# [[Menu.Main]]
+#     name = "Stoff"
+#     identifier = "resources"
+#     url = "#!"
+# 
+# [[Menu.Main]]
+#     name = "Books"
+#     identifier = "books"
+#     url = "books"
+#     parent = "resources"
+# [[Menu.Main]]
+#     name = "Podcasts"
+#     identifier = "podcasts"
+#     url = "books"
+#     parent = "resources"
+
+[params]
+site_theme = "blue"
+site_layout = "grid"
+paginate = "9"
+enable_jumbo = "true"
+custom_css = [ "css/custom.css" ]
+# enable_jumbo = "false"
+# truncate = "100"
+# about_logo = "/img/hugocast.png"
+favicon = "images/favicon_x32.png"
+copyright_notice = "7 Gute Gründe, [CC BY-ND 4.0](/lizenz), <a href=\"https://www.krumsdorf.org/\" target=\"_blank\">Martin Krumsdorf</a> – eine Produktion von <a href=\"https://insohr.de/\" target=\"_blank\">insohr</a> – ermöglicht durch <a href=\"https://ultraschall.fm/\" target=\"_blank\">ULTRASCHALL</a> und <a href=\"https://studio-link.de/\" target=\"_blank\">StudioLink</a>"
+itunes_subscribe = "https://itunes.apple.com/de/podcast/7-gute-gr%C3%BCnde/id1447767057"
+
+#android_subscribe = "https://subscribeonandroid.com/feed.7gutegruende.de/index.xml"
+spotify_subscribe = "https://open.spotify.com/show/3aDtpuxG3tK8vHdq81bcmM"
+#google_play_subscribe = "https://goo.gl/app/playmusic?ibi=com.google.PlayMusic&isi=691797987&ius=googleplaymusic&link=https://play.google.com/music/m/Ihj4yege3lfmp3vs5yoopgxijpi?t%3DArrested_DevOps"
+#stitcher_subscribe = "http://www.stitcher.com/podcast/arrested-devops-2/arrested-devops"
+#soundcloud_subscribe = "http://feeds.soundcloud.com/users/soundcloud:users:203144248/sounds.rss"
+#pocketcasts_subscribe = "http://pcasts.in/feed/feeds.soundcloud.com/users/soundcloud:users:203144248/sounds.rss"
+#mailchimp_subscribe = "//arresteddevops.us3.list-manage.com/subscribe/post?u=5e4cbcac996bb9df25f970a89&amp;id=154fa76bcc"
+rss_subscribe = "https://feed.7gutegruende.de/index.xml" #only set this if you don't want to use the built-in feed
+description = "7 Gute Gründe ist der Podcast von und für Rotkreuzlerinnen und Rotkreuzler und für alle, die mehr über diese spannende Organisation erfahren wollen. Wir sprechen mit und über Menschen, die sich im Roten Kreuz ehrenamtlich, freiwillig und beruflich engagieren und widmen uns ihren vielfältigen Aufgaben. Wir entdecken faszinierende Geschichten, erzählen sie und beleuchten Themen, die sich rund um das Rote Kreuz drehen."
+media_prefix = "https://www.7gutegruende.de/mp3/"
+  [params.feed]
+    copyright = "7gutegruende.de Martin Krumsdorf, CC BY-ND 4.0" #do not use markdown in this field; it is used in the feed
+    itunes_subtitle = "Menschen – Geschichten – Rotes Kreuz" #no markdown or HTML
+    itunes_author = "Martin Krumsdorf" #no markdown or HTML
+    itunes_summary = "7 Gute Gründe ist der Podcast von und für Rotkreuzlerinnen und Rotkreuzler und für alle, die mehr über diese spannende Organisation erfahren wollen. Wir sprechen mit und über Menschen, die sich im Roten Kreuz ehrenamtlich, freiwillig und beruflich engagieren und widmen uns ihren vielfältigen Aufgaben. Wir entdecken faszinierende Geschichten, erzählen sie und beleuchten Themen, die mit dem Roten Kreuz zu tun haben." # Limited to 4000 characters or less, plain text, no HTML
+    itunes_owner_name = "Martin Krumsdorf"
+    itunes_owner_email = "7gutegruende@insohr.de" #contains the e-mail address that will be used to contact the owner of the Podcast for communication specifically about their Podcast on iTunes. It will not be publicly displayed on iTunes.
+    itunes_image = "https://www.7gutegruende.de/images/podcastlogo.jpg" #fqdn to the image art for your podcast
+    itunes_top_category = "Society &amp; Culture"
+    #itunes_first_sub_category = "Society &amp; Culture"
+    #itunes_second_sub_category = "Gemeinnützig"
+    explicit = "no"
+    language = "de-de"
+    
+  [params.podlove] # https://subscribe-button.podlove.org
+	#subscribe_title = "alternative title"             # fallback: site title from above
+	#subscribe_subtitle = "sub title" # fallback: ""
+	#subscribe_description = ""    	  # fallback: ""
+    subscribe_cover = "images/podcastlogo_300.jpg" # fallback: ""
+    subscribe_color = "#27539b"       # fallback: ""
+	subscribe_size = "medium"         # options: small, medium, big
+	subscribe_format = "rectangle"    # options: rectangle, square, cover
+	subscribe_style = "filled"        # options: filled, outline, frameless
+	subscribe_language = "de"         # options: nl (dutch), en (english), eo (esperanto), de (german), fi (finnish), fr (french), ja (french)
+	subscribe_feed_type = "audio"     # options: audio, video
+	subscribe_feed_format = "mp3"     # options: mp3, aac, ogg, opus
+	
+	web_player_enabled = true
+	#web_player_script_url = "js/embed.js"                        # fallback: https://cdn.podlove.org/web-player/embed.js
+	web_player_theme_main = "#27539b"                             # docs and color tool: https://docs.podlove.org/podlove-web-player/theme.html
+	web_player_theme_highlight = "#ffffff"                        # see line above
+	#web_player_show_subtitle = ""                                # subtitle
+	web_player_show_poster_url = "/images/podcastlogo_300.jpg"    # small or medium logo
+
+  [params.social]
+#    github = "arresteddevops"
+#    gitlab = "mattstratton"
+     facebook = "insohr"
+#    facebook_admin = ["500557137","1234"] # This needs to be one or more page admins to get domain insights
+     twitter = "Martinobly"
+#    twitter_domain = "arresteddevops.com" # This domain shows in twitter cards as "View on `twitter_domain`"
+     paypal = "MartinKrumsdorf/19,86"         
+#    googleplus = "ArrestedDevOps"
+#    pinterest = "nozzleio"
+#    instagram = "nozzleio"
+    youtube = "channel/UCtuD2221USz0E7WGcryKHSw"
+#    linkedin = "mattstratton"
+
+  [params.authors]
+    [params.authors.Martin]
+      name	= "Martin"
+      thumbnail = "images/mitwirkende/vornamenachname-mini.jpg"
+      bio = "Martin ist Software Engineer, Rotkreuz-Evangelist und Podcaster mit Freude an #Technik, Netzpolitik, Politik, Essen und Gutmenschen."
+#      [params.authors.Martin.social]
+#        facebook = "matt.stratton"
+         twitter = "martinobly"
+#        linkedin = "mattstratton"
+#        homepage = "https://krumsdorf.org"
+#        pinterest = "mattstratton"
+#        instagram = "instagram"
+#        youtube = "mattstratton"
+
+#    [params.links]
+#      [params.links.ado]
+#        name = "Arrested DevOps"
+#        url = "https://www.arresteddevops.com"
+#      [params.links.ffs]
+#        name = "Food Fight Show"
+#        url = "https://foodfightshow.org"
+#      [params.links.sdt]
+#        name = "Software Defined Talk"
+#        url = "https://cote.io/podcasts/sdt/"

@@ -1,0 +1,6 @@
+blockquote {
+	background: #efefef;
+	border-left: .625rem solid rgba(204, 0, 0, 0.7);
+	margin: 1.5rem .625rem;
+	padding: .5rem 1rem;
+}

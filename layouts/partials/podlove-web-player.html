@@ -1,0 +1,30 @@
+<div id='{{ printf "%s%s" "episode_" .page.Params.episode }}' class="my-3"></div>
+<script>
+    podlovePlayer('{{ printf "#%s%s" "episode_" .page.Params.episode }}', {
+        title: {{ .page.Title }},
+        subtitle: {{ .page.Params.episode_subtitle }},
+        summary: {{ .page.Description }},
+        publicationDate: {{ .page.PublishDate }},
+        poster: {{ .page.Params.episode_banner | absURL}},
+        dataSite: {{ .site }},
+        dataPage: {{ .page }},
+        show: {
+            title: {{ .site.Title }},
+            subtitle: {{ .site.Params.subtitle }},
+            summary: {{ .site.Params.description }},
+            poster: {{ .site.Params.podlove.web_player_show_poster_url | absURL}},
+            url: {{ .site.BaseURL }}
+        },
+		theme: {
+			main: {{ .site.Params.podlove.web_player_theme_main }},
+			highlight: {{ .site.Params.podlove.web_player_theme_highlight }},
+		},
+        duration: {{ .page.Params.podcast_duration }},
+        chapters: [{{ range .page.Params.psc_chapters }}{start:"{{ .start }}", title: "{{ .title }}"},{{ end }}],
+        audio: [{{ range .page.Params.audio }}{url:{{ .url }}, mimeType:{{ .mimeType }}, size:{{ .size }}, title:{{ .title }} }, {{ end }}],
+        contributors: [{{ range .page.Params.contributor }}{id:{{ .id }}, avatar:{{ .avatar | absURL }}, name: {{ .name }} }, {{ end }}],
+        runtime: {language: 'de'},
+        tabs: {chapters: true},
+        visibleComponents: ['tabInfo', 'tabChapters', 'tabTranscripts', 'tabFiles', 'tabAudio', 'tabShare', 'poster', 'showTitle', 'episodeTitle', 'subtitle', 'progressbar', 'controlSteppers', 'controlChapters']
+    });
+</script>
